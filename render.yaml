@@ -1,0 +1,21 @@
+# Render Blueprint — ينشئ خدمة الويب والقرص الدائم تلقائياً
+services:
+  - type: web
+    name: hemam-whatsapp
+    runtime: node
+    plan: starter
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: SERVICE_TOKEN
+        sync: false
+      - key: AUTH_DIR
+        value: /data/auth
+      - key: NODE_VERSION
+        value: "20"
+    disk:
+      name: whatsapp-auth
+      mountPath: /data
+      sizeGB: 1
