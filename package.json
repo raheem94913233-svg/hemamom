@@ -1,6 +1,6 @@
 {
-  "name": "whatsapp-notifier",
-  "version": "2.0.0",
+  "name": "hemam-whatsapp",
+  "version": "3.0.0",
   "type": "module",
   "main": "server.js",
   "engines": { "node": ">=20" },
